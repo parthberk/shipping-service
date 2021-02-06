@@ -1,0 +1,12 @@
+com\parth\ebay\shipping\api\ApiUtil.class
+com\parth\ebay\shipping\api\EligibilityApiController.class
+com\parth\ebay\shipping\api\EligibilityApiDelegate.class
+com\parth\ebay\shipping\service\EligibilityCheckService.class
+com\parth\ebay\shipping\data\EligibilityCheckRepository.class
+com\parth\ebay\shipping\api\EligibilityApiController$1.class
+com\parth\ebay\shipping\api\EligibilityApi$1.class
+com\parth\ebay\shipping\ShippingServiceApplication.class
+com\parth\ebay\shipping\api\EligibilityApi.class
+com\parth\ebay\shipping\model\EligibilityCheckRequest.class
+com\parth\ebay\shipping\delegate\EligibilityApiDelegateImpl.class
+com\parth\ebay\shipping\model\EligibilityCheckResponse.class

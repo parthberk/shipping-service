@@ -1,0 +1,62 @@
+openapi: 3.0.2
+info:
+  title: ShippingService
+  description: "Tutorials on Spring Boot and Java, thoughts about the Software Craft, and relevant book reviews. Because it's just as important to understand the Why as it is to understand the How. Have fun!"
+  termsOfService: http://swagger.io/terms/
+  contact:
+    email: <>@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 0.0.1-SNAPSHOT
+#servers:
+#- url: https://reflectoring.swagger.io/v2
+tags:
+- name: eligibility
+  description: Operations about item eligibility
+#  externalDocs:
+#    description: Find out more about our store
+#    url: http://swagger.io
+paths:
+  /eligibility:
+    post:
+      tags:
+      - eligibility
+      summary: Check item eligibility
+      description: Check item eligibility functionality
+      operationId: checkEligibility
+      requestBody:
+        description: Eligibility Check Request
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/EligibilityCheckRequest'
+        required: true
+      responses:
+        default:
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EligibilityCheckResponse'
+      x-codegen-request-body-name: body
+components:
+  schemas:
+    EligibilityCheckRequest:
+      type: object
+      properties:
+        item:
+          type: string
+        seller:
+          type: string
+        category:
+          type: string
+        price:
+          type: number
+    EligibilityCheckResponse:
+      type: object
+      properties:
+        eligible:
+          type: boolean
+        message:
+          type: string
